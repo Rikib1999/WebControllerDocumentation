@@ -1,0 +1,19 @@
+site_name: WebController Documentation
+theme:
+  name: material
+nav: 
+  - Overview : 'index.md'
+  - Getting started : 'getting-started.md'
+  - Frontend :
+    - 'Active Sessions List' : 'ActiveSessions.md'
+    - 'Inactive Sessions List' : 'InactiveSessions.md'
+    - 'Active Session Detail' : 'ActiveSessionDetail.md'
+    - 'Inactive Session Detail' : 'InactiveSessionDetail.md'
+    - 'Current Level Map' : 'LatestPositions.md'
+  - Backend : 'app-py.md'
+  - Unity Package:
+    - 'WebControllerManager' : 'WebControllerManager.md'
+    - 'UnityMainThreadDispatcher' : 'UnityMainThreadDispatcher.md'
+    - 'GenericEventListener' : 'GenericEventListener.md'
+    - 'WebControllerCommandParameters' : 'WebControllerCommandParameters.md'
+    - 'PositionSender' : 'PositionSender.md'
