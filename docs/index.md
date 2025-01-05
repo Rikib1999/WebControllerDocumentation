@@ -2,6 +2,19 @@ This application allows you to monitor and interact with Unity game sessions in 
 
 ---
 
+## Github repositories
+
+- **WebController**: <https://github.com/cyberspace-lab/cyberframe-webcontroller>
+- **Unity package**: <https://github.com/cyberspace-lab/cyberframe-webcontroller-unitypackage>
+
+---
+
+## Dependencies
+
+- **SocketIOUnity** by itisnajim: <https://github.com/itisnajim/SocketIOUnity>
+
+---
+
 ## Application Architecture
 
 The Web Controller Application is built on a **client-server architecture**:

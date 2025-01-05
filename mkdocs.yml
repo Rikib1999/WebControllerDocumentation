@@ -17,3 +17,6 @@ nav:
     - 'GenericEventListener' : 'GenericEventListener.md'
     - 'WebControllerCommandParameters' : 'WebControllerCommandParameters.md'
     - 'PositionSender' : 'PositionSender.md'
+
+repo_name: 'cyberframe-webcontroller'
+repo_url: 'https://github.com/cyberspace-lab/cyberframe-webcontroller'
