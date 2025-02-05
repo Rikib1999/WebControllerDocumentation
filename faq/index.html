@@ -684,6 +684,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4-how-do-i-configure-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. How do I configure the application?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-do-i-view-active-and-inactive-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How do I view active and inactive sessions?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. How do I view active and inactive sessions?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#active-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       Active Sessions:
@@ -691,11 +710,61 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inactive-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       Inactive Sessions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-how-do-i-interact-with-unity-game-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. How do I interact with Unity game sessions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-does-position-tracking-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. How does position tracking work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-how-can-i-test-the-application-with-fake-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. How can I test the application with fake data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-do-i-integrate-unity-with-webcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How do I integrate Unity with WebController?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-how-can-i-remove-inactive-sessions-from-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. How can I remove inactive sessions from the server?
     </span>
   </a>
   
@@ -787,6 +856,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4-how-do-i-configure-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. How do I configure the application?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-do-i-view-active-and-inactive-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How do I view active and inactive sessions?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. How do I view active and inactive sessions?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#active-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       Active Sessions:
@@ -794,11 +882,61 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inactive-sessions" class="md-nav__link">
     <span class="md-ellipsis">
       Inactive Sessions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-how-do-i-interact-with-unity-game-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. How do I interact with Unity game sessions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-how-does-position-tracking-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. How does position tracking work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-how-can-i-test-the-application-with-fake-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. How can I test the application with fake data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-do-i-integrate-unity-with-webcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How do I integrate Unity with WebController?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-how-can-i-remove-inactive-sessions-from-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. How can I remove inactive sessions from the server?
     </span>
   </a>
   
@@ -826,37 +964,37 @@
 <h2 id="1-what-is-webcontroller">1. What is WebController?</h2>
 <p><strong>WebController</strong> is a web application designed for managing and monitoring Unity-based experiments. It allows users to track active and inactive game sessions, send commands, receive data, and view player positions on a map.</p>
 <h2 id="2-what-components-does-webcontroller-use">2. What components does WebController use?</h2>
-<p>WebController is built on a client-server architecture and consists of the following components:
-- <strong>Frontend</strong>: Developed using Vue.js for displaying session details and providing interactive controls.
-- <strong>Backend</strong>: A Flask application managing sessions and WebSocket communication.
-- <strong>Unity Client</strong>: Unity game sessions that communicate with the server.
-- <strong>Proxy Server</strong>: An NGINX reverse proxy for routing requests.
-- <strong>Dockerized Environment</strong>: Components are containerized for easy deployment and scalability.</p>
+<p>WebController is built on a client-server architecture and consists of the following components:</p>
+<ul>
+<li><strong>Frontend</strong>: Developed using Vue.js for displaying session details and providing interactive controls.</li>
+<li><strong>Backend</strong>: A Flask application managing sessions and WebSocket communication.</li>
+<li><strong>Unity Client</strong>: Unity game sessions that communicate with the server.</li>
+<li><strong>Proxy Server</strong>: An NGINX reverse proxy for routing requests.</li>
+<li><strong>Dockerized Environment</strong>: Components are containerized for easy deployment and scalability.</li>
+</ul>
 <h2 id="3-how-do-i-install-webcontroller">3. How do I install WebController?</h2>
 <h3 id="prerequisites">Prerequisites:</h3>
-<p>Before starting, make sure you have the following installed:
-- Docker
-- Docker Compose
-- Git</p>
+<p>Before starting, make sure you have the following installed:</p>
+<ul>
+<li>Docker</li>
+<li>Docker Compose</li>
+<li>Git</li>
+</ul>
 <h3 id="steps">Steps:</h3>
 <ol>
-<li>
-<p>Clone the repository:
-   <code>bash
-   git clone https://github.com/cyberspace-lab/cyberframe-webcontroller.git
-   cd cyberframe-webcontroller</code></p>
-</li>
-<li>
-<p>Create and start Docker containers:
-    <code>bash
-    docker-compose up --build</code>
-This will build and start the application, including the Flask backend, Vue frontend, and NGINX reverse proxy.</p>
-</li>
-<li>
-<p>How do I configure the application?
-Configuration for each experiment is done in the config.json file located at ./vuefrontend/src/config.json. The file allows you to define:</p>
-</li>
+<li>Clone the repository:</li>
 </ol>
+<pre><code>git clone https://github.com/cyberspace-lab/cyberframe-webcontroller.git
+cd cyberframe-webcontroller
+</code></pre>
+<ol>
+<li>Create and start Docker containers:</li>
+</ol>
+<pre><code>docker-compose up --build
+</code></pre>
+<p>This will build and start the application, including the Flask backend, Vue frontend, and NGINX reverse proxy.</p>
+<h2 id="4-how-do-i-configure-the-application">4. How do I configure the application?</h2>
+<p>Configuration for each experiment is done in the config.json file located at ./vuefrontend/src/config.json. The file allows you to define:</p>
 <p>Control Buttons: Custom buttons for sending commands to Unity clients.
 Data Receivers: Defines the data expected from Unity clients.
 Levels: Map and level data, including size and calibration settings.
@@ -901,12 +1039,10 @@ Example:</p>
   &quot;min_free_memory_percentage&quot;: 20
 }
 </code></pre>
-<ol>
-<li>How do I view active and inactive sessions?</li>
-</ol>
-<h2 id="active-sessions">Active Sessions:</h2>
+<h2 id="5-how-do-i-view-active-and-inactive-sessions">5. How do I view active and inactive sessions?</h2>
+<h3 id="active-sessions">Active Sessions:</h3>
 <p>You can view the list of active sessions by navigating to:</p>
-<pre><code class="language-bash">{APPLICATION_URL}/activesessions
+<pre><code>{APPLICATION_URL}/activesessions
 </code></pre>
 <p>Here, you can see details about currently active game sessions, including:</p>
 <ul>
@@ -915,42 +1051,32 @@ Example:</p>
 <li>Connection time</li>
 <li>Last data update time</li>
 </ul>
-<h2 id="inactive-sessions">Inactive Sessions:</h2>
+<h3 id="inactive-sessions">Inactive Sessions:</h3>
 <p>Inactive sessions can be viewed at:</p>
-<pre><code class="language-bash">{APPLICATION_URL}/inactivesessions
+<pre><code>{APPLICATION_URL}/inactivesessions
 </code></pre>
 <p>You can view historical data for inactive sessions and remove them from the server.</p>
-<ol>
-<li>How do I interact with Unity game sessions?
-You can send commands to Unity game sessions from the Control Panel on the active session detail page. Each button is associated with a specific command, and if the command requires input, you can enter it in the provided input field.</li>
-</ol>
+<h2 id="6-how-do-i-interact-with-unity-game-sessions">6. How do I interact with Unity game sessions?</h2>
+<p>You can send commands to Unity game sessions from the Control Panel on the active session detail page. Each button is associated with a specific command, and if the command requires input, you can enter it in the provided input field.</p>
 <p>Commands are defined in the config.json file and include parameters, such as starting or stopping the experiment or setting participant information.</p>
-<ol>
-<li>How does position tracking work?
-The application can track the positions of players and objects in the game world. To enable position tracking, you need to define a position data receiver in the config.json file.</li>
-</ol>
+<h2 id="7-how-does-position-tracking-work">7. How does position tracking work?</h2>
+<p>The application can track the positions of players and objects in the game world. To enable position tracking, you need to define a position data receiver in the config.json file.</p>
 <p>The position of players and objects is displayed on the map in real-time, with a history of past positions. The map updates automatically when the level changes.</p>
 <p>Positions are shown as dots with arrows indicating rotation, and the path of movement is drawn by connecting the positions.</p>
-<ol>
-<li>How can I test the application with fake data?
-You can test the frontend and backend communication with fake data by visiting:</li>
-</ol>
-<pre><code class="language-bash">http://localhost:4000/test
+<h2 id="8-how-can-i-test-the-application-with-fake-data">8. How can I test the application with fake data?</h2>
+<p>You can test the frontend and backend communication with fake data by visiting:</p>
+<pre><code>http://localhost:4000/test
 </code></pre>
 <p>Here, you can simulate fake sessions and send fake data to specific sessions by providing a fake experiment name and device ID.</p>
-<ol>
-<li>How do I integrate Unity with WebController?
-To integrate Unity with WebController, you'll need to:</li>
-</ol>
+<h2 id="9-how-do-i-integrate-unity-with-webcontroller">9. How do I integrate Unity with WebController?</h2>
+<p>To integrate Unity with WebController, you'll need to:</p>
 <p>Add the Unity package (which includes several scripts) to your project.
 Use the WebControllerManager script to connect your Unity project to the server. This script should be attached to a GameObject in the main scene.
 Use the SendData() method to send data to the server and the GenericEventListener script to listen for commands from the server.
 Use the PositionSender script to send position data for objects and players.
 For detailed instructions, refer to the Unity Integration section.</p>
-<ol>
-<li>How can I remove inactive sessions from the server?
-On the detail page of an inactive session, you'll find an option to remove the session from the server. This action is permanent and cannot be undone.</li>
-</ol>
+<h2 id="10-how-can-i-remove-inactive-sessions-from-the-server">10. How can I remove inactive sessions from the server?</h2>
+<p>On the detail page of an inactive session, you'll find an option to remove the session from the server. This action is permanent and cannot be undone.</p>
 
 
 
