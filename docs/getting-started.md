@@ -42,7 +42,7 @@ The application needs to be configured for each experiment in the file `./vue-fr
 - **applications**: A dictionary of applications with their specific settings.
   - **Application Name** (e.g., `"MoveDifferent"`):
     - **controlButtons**: Defines buttons that send commands to Unity clients.
-    - **receivers**: Specifies data keys and history limits expected from Unity clients.
+    - **receivers**: Specifies data keys and history limits expected from Unity clients. Just a list of names of data types that are expected to be recieved from Unity app and will be shown in the session detail.
     - **levels**: Contains details about levels/scenes, including map images and real-world dimensions.
 
 - **min_free_memory_percentage**: The minimum percentage of free memory required before cleaning up inactive sessions begins.
@@ -153,6 +153,8 @@ Each level map is defined with the following properties:
 WebController Unity package facilitates communication between the game session and the server. This package includes **five scripts**, which need to be added to the Unity project. It requires the **Socket.IO library**, which can be downloaded via the **Package Manager** in Unity using the link:  
 `https://github.com/itisnajim/SocketIOUnity.git`.
 
+![Socket.IO package installation](images/socketio.png)
+
 ---
 
 #### Key Script: **WebControllerManager**
@@ -167,6 +169,8 @@ This is the main script of the package and must be attached to an object in the 
   - **Debug options**:
     - `debug`: Logs connection-related messages to the Unity console.
     - `useLocalhost`: Overrides `serverURL` with `http://localhost`.
+
+![WebControllerManager in Unity Inspector](images/manager.png)
 
 If `sessionName` is not provided, the app uses the Unity project name as the default experiment name.
 
@@ -186,15 +190,36 @@ WebControllerManager.SendData(string key, string value);
     - Reserved keys: `position` and `context` (cannot be used).
 - **`value`**: The data value, provided as a string.
 
+Data will be displayed in the session detail page.
+
+**Example**:
+```csharp
+public void TakeDamage(int damage)
+{
+  this.health -= damage;
+  WebControllerManager.SendData("damage_taken", damage);
+
+  if (this.health <= 0)
+  {
+    WebControllerManager.SendData("player_event", "Player was killed");
+    KillPlayer();
+  }
+}
+```  
+
 ---
 
 #### Receiving Commands from the Server
+By clicking a button in the control panel of a session detail page in the web application, the server will send a command with parameters to the Unity session.
+
 To handle commands from the server:
 
 1. Attach the **GenericEventListener** script to an object in the scene.
 2. In the **Inspector**, configure the `events` section:
     - Define the event **name** (matching the button configuration in the web app).
     - Assign an **action** (method to be called when the command is received).
+
+![GenericListener in Unity Inspector](images/genericlistener.png)
 
 **Supported Method Types**:
 
@@ -203,29 +228,60 @@ To handle commands from the server:
 
 If the command includes parameters, extract them from the dictionary using the parameter name (key). The values are of type `object`.
 
+**Example**:
+```csharp
+public void ReceiveParticipantName(WebControllerCommandParameters parameters)
+{
+  string name = (string)parameters["name"];
+  this.textbox.text = name;
+}
+
+public void SetAndStartLevel(WebControllerCommandParameters parameters)
+{
+  int levelID = (int)parameters["levelID"];
+  Logger.Log("Starting level with ID:" + levelID);
+  StartLevel(levelID);
+}
+
+//example of method without parameter
+public void ResetPlayersPosition()
+{
+  player.transform.position = new Vector3(0, 0, 0);
+}
+``` 
+
 ---
 
 #### Changing Contexts for Buttons
-Call the static method:
+Buttons in the control panel of a detail of a session in the web application can have some context defined in which they will be shown.
+
+To set these contexts call the static method:
 ```csharp
 WebControllerManager.SetContext(string[] values);
 ```
 - **`values`**: An array of current context names.
 - Buttons in the web app with at least one matching context name (or no defined context) will be displayed.
 
+**Example**:
+```csharp
+WebControllerManager.SetContext(new string[] { "menu", "player_controls" });
+``` 
+
 ---
 
 #### Sending Player and Object Positions
-To send positions:
+To send positions that will be shown in realtime on the map in the web application:
 
 1. Attach the **PositionSender** script to an empty object in the scene.
 2. Configure in the **Inspector**:
-    - **currentLevelID**: Identification number for the current level.
+    - **currentLevelID**: Identification number for the current level. This ID will be used in the web application for selecting the correct map image.
     - **intervalInSeconds**: Interval (in seconds) for sending positions.
     - **transformTrackings**: List of objects to track, including:
         - References to the objects.
         - Colors for the last position, previous positions, and movement trails.
 
 ---
+
+![PositionSender in Unity Inspector](images/positionsender.png)
 
 This setup ensures seamless communication and integration between Unity projects and the server, enabling real-time interaction, data sharing, and experiment management.
