@@ -994,12 +994,15 @@
 </li>
 </ol>
 <h2 id="4-how-do-i-configure-the-application">4. How do I configure the application?</h2>
-<p>Configuration for each experiment is done in the config.json file located at ./vuefrontend/src/config.json. The file allows you to define:</p>
-<p>Control Buttons: Custom buttons for sending commands to Unity clients.
-Data Receivers: Defines the data expected from Unity clients.
-Levels: Map and level data, including size and calibration settings.
-Memory Settings: Minimum free memory percentage before cleaning inactive sessions.
-Example:</p>
+<p>Configuration for each experiment is done in the config.json file located at ./vuefrontend/src/config.json.
+The file allows you to define:</p>
+<ul>
+<li>Control Buttons: Custom buttons for sending commands to Unity clients.</li>
+<li>Data Receivers: Defines the data expected from Unity clients.</li>
+<li>Levels: Map and level data, including size and calibration settings.</li>
+<li>Memory Settings: Minimum free memory percentage before cleaning inactive sessions.</li>
+</ul>
+<p>Example:</p>
 <pre><code class="language-json">{
   &quot;applications&quot;: {
     &quot;MoveDifferent&quot;: {
