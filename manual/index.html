@@ -315,18 +315,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#active-session-details" class="md-nav__link">
+  <a href="#active-session-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Active Session Details
+      Active Session Detail
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inactive-session-details" class="md-nav__link">
+  <a href="#inactive-session-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Inactive Session Details
+      Inactive Session Detail
     </span>
   </a>
   
@@ -744,18 +744,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#active-session-details" class="md-nav__link">
+  <a href="#active-session-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Active Session Details
+      Active Session Detail
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inactive-session-details" class="md-nav__link">
+  <a href="#inactive-session-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Inactive Session Details
+      Inactive Session Detail
     </span>
   </a>
   
@@ -814,14 +814,14 @@
 <h2 id="inactive-session-list">Inactive Session List</h2>
 <p>At the address <code>"{APPLICATION_ADDRESS}/inactivesessions"</code>, you can view a list of all past game sessions that are currently disconnected. The list contains the session name, the device identification number on which the game session was running, the connection time, and the last data update time. By clicking on a session item, you will be redirected to its details page. Clicking on the button in the top right corner, "VIEW ACTIVE SESSIONS," will redirect you to the list of active game sessions.</p>
 <p><img alt="Inactive Session List Page" src="../images/inactivesessions.png" /></p>
-<h2 id="active-session-details">Active Session Details</h2>
+<h2 id="active-session-detail">Active Session Detail</h2>
 <p>The game session details are available by clicking on a session from the list of active game sessions. The page is divided into four parts:
 - In the top left corner, you can see the experiment name, the device identification number on which the game session is running, the connection time, the last data update time, a button to return to the active session list, and a button to save the game session data in JSON format.
 - In the bottom left part, there is a map of the current level, including the positions and rotations of the monitored players and levels. The map updates in real-time.
 - In the top right part, there is a control panel with buttons for commands defined in the configuration file. When a button is clicked, the corresponding command is sent to the game session. If the command has a dynamic parameter, a text box will appear next to the button where you can input the parameter, and then click the button to send it.
 - In the bottom right part, there is a list of all received data from the game session except for the position (which is displayed on the map or can be downloaded with the other session data). To show or hide previous received data, you must click on the specific data. The received data updates in real-time.</p>
 <p><img alt="Active Session Details Page" src="../images/activedetail.png" /></p>
-<h2 id="inactive-session-details">Inactive Session Details</h2>
+<h2 id="inactive-session-detail">Inactive Session Detail</h2>
 <p>The details of an inactive game session are available by clicking on a session from the list of inactive game sessions. It is the same as the details of an active game session except for two differences:
 - The control panel is not displayed because a disconnected session cannot be controlled.
 - A button is added to delete the game session from the server's memory and disk. Deletion is irreversible.</p>
