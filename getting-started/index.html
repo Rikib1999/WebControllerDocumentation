@@ -762,6 +762,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1090,6 +1110,7 @@
 <h2 id="integration-of-unity-package">Integration of Unity Package</h2>
 <p>WebController Unity package facilitates communication between the game session and the server. This package includes <strong>five scripts</strong>, which need to be added to the Unity project. It requires the <strong>Socket.IO library</strong>, which can be downloaded via the <strong>Package Manager</strong> in Unity using the link:<br />
 <code>https://github.com/itisnajim/SocketIOUnity.git</code>.</p>
+<p><img alt="Socket.IO package installation" src="../images/socketio.png" /></p>
 <hr />
 <h4 id="key-script-webcontrollermanager">Key Script: <strong>WebControllerManager</strong></h4>
 <p>This is the main script of the package and must be attached to an object in the <strong>main starting scene</strong> of the project. Subsequent scenes should be accessed from this starting scene. The object with <strong>WebControllerManager</strong> persists across scenes, ensuring only one instance exists throughout the project.</p>
@@ -1147,7 +1168,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="WebControllerManager in Unity Inspector" src="../images/genericlistener.png" /></p>
+<p><img alt="GenericListener in Unity Inspector" src="../images/genericlistener.png" /></p>
 <p><strong>Supported Method Types</strong>:</p>
 <ul>
 <li>Without parameters.</li>
@@ -1204,7 +1225,7 @@ public void ResetPlayersPosition()
 </li>
 </ol>
 <hr />
-<p><img alt="WebControllerManager in Unity Inspector" src="../images/positionsender.png" /></p>
+<p><img alt="PositionSender in Unity Inspector" src="../images/positionsender.png" /></p>
 <p>This setup ensures seamless communication and integration between Unity projects and the server, enabling real-time interaction, data sharing, and experiment management.</p>
 
 
