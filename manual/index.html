@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-repositories" class="md-skip">
+        <a href="#active-session-list" class="md-skip">
           Skip to content
         </a>
       
@@ -297,36 +297,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-repositories" class="md-nav__link">
+  <a href="#active-session-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Github repositories
+      Active Session List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
+  <a href="#inactive-session-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Dependencies
+      Inactive Session List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#application-architecture" class="md-nav__link">
+  <a href="#active-session-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Architecture
+      Active Session Details
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-features" class="md-nav__link">
+  <a href="#inactive-session-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Main Features
+      Inactive Session Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Panel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-and-position-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map and Position Tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-fake-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with Fake Data
     </span>
   </a>
   
@@ -661,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq.md" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,36 +726,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-repositories" class="md-nav__link">
+  <a href="#active-session-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Github repositories
+      Active Session List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
+  <a href="#inactive-session-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Dependencies
+      Inactive Session List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#application-architecture" class="md-nav__link">
+  <a href="#active-session-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Architecture
+      Active Session Details
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-features" class="md-nav__link">
+  <a href="#inactive-session-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Main Features
+      Inactive Session Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Panel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-and-position-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map and Position Tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-fake-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with Fake Data
     </span>
   </a>
   
@@ -754,63 +808,32 @@
 
   <h1>Manual</h1>
 
-<h2 id="github-repositories">Github repositories</h2>
-<ul>
-<li><strong>WebController</strong>: <a href="https://github.com/cyberspace-lab/cyberframe-webcontroller">https://github.com/cyberspace-lab/cyberframe-webcontroller</a></li>
-<li><strong>Unity package</strong>: <a href="https://github.com/cyberspace-lab/cyberframe-webcontroller-unitypackage">https://github.com/cyberspace-lab/cyberframe-webcontroller-unitypackage</a></li>
-</ul>
-<hr />
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><strong>SocketIOUnity</strong> by itisnajim: <a href="https://github.com/itisnajim/SocketIOUnity">https://github.com/itisnajim/SocketIOUnity</a></li>
-</ul>
-<hr />
-<h2 id="application-architecture">Application Architecture</h2>
-<p>The Web Controller Application is built on a <strong>client-server architecture</strong>:</p>
-<ul>
-<li><strong>Frontend</strong>: Implemented using <strong>Vue.js</strong> framework.</li>
-<li><strong>Backend</strong>: Utilizes <strong>Flask</strong>, a Python web framework.</li>
-<li><strong>Communication</strong>: Real-time, two-way communication using <strong>WebSockets</strong> via <strong>Socket.IO</strong>.</li>
-<li><strong>Reverse Proxy</strong>: <strong>Nginx</strong> is used to proxy requests between clients and the server.</li>
-<li><strong>Unity Integration</strong>: Unity game sessions act as clients communicating with the server.</li>
-<li><strong>Containerization</strong>: The application is dockerized for easy deployment.</li>
-</ul>
-<hr />
-<h2 id="main-features">Main Features</h2>
-<ul>
-<li>
-<p><strong>Active and Inactive Session Management</strong><br />
-  Easy tracking of game sessions with separate lists for active and inactive ones. Includes detailed logs like experiment name, device ID, timestamps, and options to save session data.</p>
-</li>
-<li>
-<p><strong>Live Map View</strong><br />
-  Displays player and object positions on a map in real-time, showing movement paths and directions. Supports switching maps for different levels.</p>
-</li>
-<li>
-<p><strong>Customizable Control Panel</strong><br />
-  Context-sensitive control panel to manage experiments, offering actions like starting, stopping, resetting, or moving players. Includes dynamic parameter inputs for flexible command execution.</p>
-</li>
-<li>
-<p><strong>Data Display and Organization</strong><br />
-  Real-time data from sessions is shown clearly and grouped by type, with limits on how much past data is stored.</p>
-</li>
-<li>
-<p><strong>Automatic Session Management</strong><br />
-  Automated saving of sessions on disconnection and memory cleanup to maintain system performance. Sessions are stored on disk and can be exported as JSON.</p>
-</li>
-<li>
-<p><strong>Flexible Configuration Options</strong><br />
-  Fully configurable via JSON file, allowing easy customization of button actions, data types, level maps, and memory thresholds without additional coding.</p>
-</li>
-<li>
-<p><strong>Multi-Client and Experiment Support</strong><br />
-  Supports multiple simultaneous sessions, diverse experiment types, and multiple frontend instances for scalable use cases.</p>
-</li>
-<li>
-<p><strong>Connection State Monitoring</strong><br />
-  Tracks connection events like reconnecting or disconnecting, so experiments can react or notify users if needed.</p>
-</li>
-</ul>
+<h2 id="active-session-list">Active Session List</h2>
+<p>At the address <code>"{APPLICATION_ADDRESS}/activesessions"</code>, you can view a list of all currently connected game sessions. The list contains the name of the session, the device identification number on which the game session is running, the connection time, and the last data update time. By clicking on a session item, you will be redirected to its details page. Clicking on the button in the top right corner, "VIEW INACTIVE SESSIONS," will redirect you to the list of inactive game sessions.</p>
+<p><strong>Figure 1</strong>: Active Session List Page</p>
+<h2 id="inactive-session-list">Inactive Session List</h2>
+<p>At the address <code>"{APPLICATION_ADDRESS}/inactivesessions"</code>, you can view a list of all past game sessions that are currently disconnected. The list contains the session name, the device identification number on which the game session was running, the connection time, and the last data update time. By clicking on a session item, you will be redirected to its details page. Clicking on the button in the top right corner, "VIEW ACTIVE SESSIONS," will redirect you to the list of active game sessions.</p>
+<p><strong>Figure 2</strong>: Inactive Session List Page</p>
+<h2 id="active-session-details">Active Session Details</h2>
+<p>The game session details are available by clicking on a session from the list of active game sessions. The page is divided into four parts:
+- In the top left corner, you can see the experiment name, the device identification number on which the game session is running, the connection time, the last data update time, a button to return to the active session list, and a button to save the game session data in JSON format.
+- In the bottom left part, there is a map of the current level, including the positions and rotations of the monitored players and levels. The map updates in real-time.
+- In the top right part, there is a control panel with buttons for commands defined in the configuration file. When a button is clicked, the corresponding command is sent to the game session. If the command has a dynamic parameter, a text box will appear next to the button where you can input the parameter, and then click the button to send it.
+- In the bottom right part, there is a list of all received data from the game session except for the position (which is displayed on the map or can be downloaded with the other session data). To show or hide previous received data, you must click on the specific data. The received data updates in real-time.</p>
+<p><strong>Figure 3</strong>: Active Session Details Page</p>
+<h2 id="inactive-session-details">Inactive Session Details</h2>
+<p>The details of an inactive game session are available by clicking on a session from the list of inactive game sessions. It is the same as the details of an active game session except for two differences:
+- The control panel is not displayed because a disconnected session cannot be controlled.
+- A button is added to delete the game session from the server's memory and disk. Deletion is irreversible.</p>
+<p><strong>Figure 4</strong>: Inactive Session Details Page</p>
+<h2 id="control-panel">Control Panel</h2>
+<p>The control panel is located in the top right corner of the active game session details page. All buttons for the current context are displayed here. If the button expects a parameter to be filled, a text box will appear next to it where the parameter can be entered. When clicked, the button’s command, possibly along with the parameter, will be sent to the server. The parameter can be dynamic from the text box or static, as defined in the configuration file. The command may be without a parameter or, in the case of a static parameter, there may be several.</p>
+<p><strong>Figure 5</strong>: Control Panel in the Active Session Details Page</p>
+<h2 id="map-and-position-tracking">Map and Position Tracking</h2>
+<p>The map is displayed in the bottom left part of the session details page. It shows the positions and rotations of all monitored players and objects in real-time. When the level changes, the map image updates automatically. To display the map, it is necessary to define the type of incoming data as "position" in the configuration file. The map shows the latest positions as well as several previous positions, the number of which can be defined in the configuration. Positions are connected by a line that represents the movement path. Each position is shown as a dot with an arrow indicating the rotation. Older positions are always drawn with smaller dots and arrows. In the Unity package, you can define different colors for each monitored object and also different colors for the latest position, older positions, and the movement path. The Unity package also defines the interval for sending positions.</p>
+<p><strong>Figure 6</strong>: The Map of the Current Level Displays Player Movement and Object Locations in the Scene</p>
+<h2 id="testing-with-fake-data">Testing with Fake Data</h2>
+<p>The communication between the frontend and the backend, as well as data display on the frontend, can be easily tested at the address <code>http://localhost:4000/test</code> during local development. By filling in a fake experiment name and fake device identification number, you can create a fake session on the server. You can also send fake data to a specific session based on the device identification number.</p>
 
 
 
