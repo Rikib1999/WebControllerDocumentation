@@ -324,6 +324,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -332,10 +352,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -346,8 +366,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Frontend
           </label>
@@ -499,10 +519,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -513,8 +533,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Unity Package
           </label>
@@ -715,7 +735,7 @@
 <p>This application allows you to monitor and interact with Unity game sessions in real-time via a web interface. You can view active and inactive sessions, send commands, and visualize player positions on a map. The WebController is a client-server application designed to enable real-time communication between Unity applications (clients) and a Vue.js frontend via a Flask backend using WebSockets (Socket.IO). The application is containerized using Docker for ease of deployment.</p>
 <p>This solution consists of a web application and a Unity package. The web application includes a frontend and a server. In the web application, the user can see a list of all currently connected Unity sessions as well as a list of past, inactive sessions. Upon selecting a session from the list, its details are displayed. The session detail view shows basic information about the session. The detail view includes a control panel consisting of buttons that represent commands sent to the Unity session. These buttons may also have text fields for command input. The session detail also displays data received from the Unity session in real-time, organized into lists based on data types. Additionally, the detail view shows a map of the currently running level in the Unity session, displaying the positions, rotations, and paths of the player and other objects in the scene in real-time. A Unity session can be controlled indefinitely using only the control panel, within the scope of the Unity package implementation in the given project. The session details can be saved to a file in JSON format.</p>
 <p>The Unity package in the session automatically connects to the server when the project is launched and immediately appears in the list of active sessions. Implementing the Unity package into a project is simple and does not require any changes or adjustments to the project’s logic. The package consists of 5 scripts. The main script is a manager script where the connection parameters to the server are configured. Receiving events from the server is handled by a separate script, where the names of the received commands are defined along with their corresponding reactions in the form of Unity events. Sending data about the positions of the player and other objects is also managed by a separate script, where it is only necessary to pass references to the respective objects and the player. Sending custom data to the server is done via a static method through code, with data always sent as a key-value pair of string type.</p>
-<p>For more information on the functionality and control of the application, please refer to the section <a href="app-py/">APP PY</a>.</p>
+<p>For more information on the functionality and control of the application, please refer to the section <a href="manual/">Manual</a>.</p>
 <hr />
 <h2 id="github-repositories">Github repositories</h2>
 <ul>
