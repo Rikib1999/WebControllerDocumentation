@@ -1121,7 +1121,8 @@
 </li>
 <li><strong><code>value</code></strong>: The data value, provided as a string.</li>
 </ul>
-<p>Example:</p>
+<p>Data will be displayed in the session detail page.</p>
+<p><strong>Example</strong>:</p>
 <pre><code class="language-csharp">public void TakeDamage(int damage)
 {
   this.health -= damage;
@@ -1136,6 +1137,7 @@
 </code></pre>
 <hr />
 <h4 id="receiving-commands-from-the-server">Receiving Commands from the Server</h4>
+<p>By clicking a button in the control panel of a session detail page in the web application, the server will send a command with parameters to the Unity session.</p>
 <p>To handle commands from the server:</p>
 <ol>
 <li>Attach the <strong>GenericEventListener</strong> script to an object in the scene.</li>
@@ -1152,22 +1154,46 @@
 <li>With a single parameter of type <code>WebControllerCommand</code> (a wrapper for a dictionary).</li>
 </ul>
 <p>If the command includes parameters, extract them from the dictionary using the parameter name (key). The values are of type <code>object</code>.</p>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-csharp">public void ReceiveParticipantName(WebControllerCommandParameters parameters)
+{
+  string name = (string)parameters[&quot;name&quot;];
+  this.textbox.text = name;
+}
+
+public void SetAndStartLevel(WebControllerCommandParameters parameters)
+{
+  int levelID = (int)parameters[&quot;levelID&quot;];
+  Logger.Log(&quot;Starting level with ID:&quot; + levelID);
+  StartLevel(levelID);
+}
+
+//example of method without parameter
+public void ResetPlayersPosition()
+{
+  player.transform.position = new Vector3(0, 0, 0);
+}
+</code></pre>
 <hr />
 <h4 id="changing-contexts-for-buttons">Changing Contexts for Buttons</h4>
-<p>Call the static method:</p>
+<p>Buttons in the control panel of a detail of a session in the web application can have some context defined in which they will be shown.</p>
+<p>To set these contexts call the static method:</p>
 <pre><code class="language-csharp">WebControllerManager.SetContext(string[] values);
 </code></pre>
 <ul>
 <li><strong><code>values</code></strong>: An array of current context names.</li>
 <li>Buttons in the web app with at least one matching context name (or no defined context) will be displayed.</li>
 </ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-csharp">WebControllerManager.SetContext(new string[] { &quot;menu&quot;, &quot;player_controls&quot; });
+</code></pre>
 <hr />
 <h4 id="sending-player-and-object-positions">Sending Player and Object Positions</h4>
-<p>To send positions:</p>
+<p>To send positions that will be shown in realtime on the map in the web application:</p>
 <ol>
 <li>Attach the <strong>PositionSender</strong> script to an empty object in the scene.</li>
 <li>Configure in the <strong>Inspector</strong>:<ul>
-<li><strong>currentLevelID</strong>: Identification number for the current level.</li>
+<li><strong>currentLevelID</strong>: Identification number for the current level. This ID will be used in the web application for selecting the correct map image.</li>
 <li><strong>intervalInSeconds</strong>: Interval (in seconds) for sending positions.</li>
 <li><strong>transformTrackings</strong>: List of objects to track, including:<ul>
 <li>References to the objects.</li>
@@ -1178,6 +1204,7 @@
 </li>
 </ol>
 <hr />
+<p><img alt="WebControllerManager in Unity Inspector" src="../images/positionsender.png" /></p>
 <p>This setup ensures seamless communication and integration between Unity projects and the server, enabling real-time interaction, data sharing, and experiment management.</p>
 
 
