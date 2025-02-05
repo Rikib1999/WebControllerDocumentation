@@ -982,17 +982,17 @@
 </ul>
 <h3 id="steps">Steps:</h3>
 <ol>
-<li>Clone the repository:</li>
+<li>
+<p>Clone the repository:
+    <code>git clone https://github.com/cyberspace-lab/cyberframe-webcontroller.git
+    cd cyberframe-webcontroller</code></p>
+</li>
+<li>
+<p>Create and start Docker containers:x
+    <code>docker-compose up --build</code>
+    This will build and start the application, including the Flask backend, Vue frontend, and NGINX reverse proxy.</p>
+</li>
 </ol>
-<pre><code>git clone https://github.com/cyberspace-lab/cyberframe-webcontroller.git
-cd cyberframe-webcontroller
-</code></pre>
-<ol>
-<li>Create and start Docker containers:</li>
-</ol>
-<pre><code>docker-compose up --build
-</code></pre>
-<p>This will build and start the application, including the Flask backend, Vue frontend, and NGINX reverse proxy.</p>
 <h2 id="4-how-do-i-configure-the-application">4. How do I configure the application?</h2>
 <p>Configuration for each experiment is done in the config.json file located at ./vuefrontend/src/config.json. The file allows you to define:</p>
 <p>Control Buttons: Custom buttons for sending commands to Unity clients.
