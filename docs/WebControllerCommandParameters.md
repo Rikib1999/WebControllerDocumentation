@@ -20,6 +20,8 @@ public void ReceiveDataFromServer(WebControllerCommandParameters parameters)
 }
 ```
 
+**Important**: Dynamic input is accessible with the key ```"userInput"```.
+
 ---
 
 This class provides an encapsulation for web controller command parameters, storing them in a read-only dictionary. It is a flexible solution for storing and passing around parameters that can be accessed by key while ensuring the integrity and immutability of the data once set.

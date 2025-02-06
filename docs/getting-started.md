@@ -61,6 +61,8 @@ Each button has the following properties:
     - **parameters**: Parameters for the command.
 - **context**: A list of context names in which the button will appear. If left empty, the button will always be visible.
 
+**Important**: Dynamic input parameter is accessible in the Unity with the key ```"userInput"```.
+
 ---
 
 #### Data Definition
@@ -248,7 +250,9 @@ public void ResetPlayersPosition()
 {
   player.transform.position = new Vector3(0, 0, 0);
 }
-``` 
+```
+
+**Important**: Dynamic input is accessible with the key ```"userInput"```.
 
 ---
 

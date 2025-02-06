@@ -5,6 +5,7 @@ nav:
   - Overview : 'index.md'
   - Getting started : 'getting-started.md'
   - Manual : 'manual.md'
+  - Demo : 'demo.md'
   - Frontend :
     - 'Active Sessions List' : 'ActiveSessions.md'
     - 'Inactive Sessions List' : 'InactiveSessions.md'
