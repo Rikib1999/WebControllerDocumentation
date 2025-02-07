@@ -165,7 +165,7 @@ This is the main script of the package and must be attached to an object in the 
 **Configuration in Inspector**:
 
   - **serverURL**: URL of the server (e.g., `http://localhost`).
-  - **port**: Server port.
+  - **port**: Server port. Default port is 4000.
   - **sessionName**: Name of the experiment session.
   - **reconnectionTime**: Time interval (in seconds) for retrying server connections after disconnection.
   - **Debug options**:

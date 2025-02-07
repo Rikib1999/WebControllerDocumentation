@@ -6,19 +6,20 @@ nav:
   - Getting started : 'getting-started.md'
   - Manual : 'manual.md'
   - Demo : 'demo.md'
-  - Frontend :
-    - 'Active Sessions List' : 'ActiveSessions.md'
-    - 'Inactive Sessions List' : 'InactiveSessions.md'
-    - 'Active Session Detail' : 'ActiveSessionDetail.md'
-    - 'Inactive Session Detail' : 'InactiveSessionDetail.md'
-    - 'Current Level Map' : 'LatestPositions.md'
-  - Backend : 'app-py.md'
-  - Unity Package:
-    - 'WebControllerManager' : 'WebControllerManager.md'
-    - 'UnityMainThreadDispatcher' : 'UnityMainThreadDispatcher.md'
-    - 'GenericEventListener' : 'GenericEventListener.md'
-    - 'WebControllerCommandParameters' : 'WebControllerCommandParameters.md'
-    - 'PositionSender' : 'PositionSender.md'
+  - Code:
+    - Frontend :
+      - 'Active Sessions List' : 'ActiveSessions.md'
+      - 'Inactive Sessions List' : 'InactiveSessions.md'
+      - 'Active Session Detail' : 'ActiveSessionDetail.md'
+      - 'Inactive Session Detail' : 'InactiveSessionDetail.md'
+      - 'Current Level Map' : 'LatestPositions.md'
+    - Backend : 'app-py.md'
+    - Unity Package:
+      - 'WebControllerManager' : 'WebControllerManager.md'
+      - 'UnityMainThreadDispatcher' : 'UnityMainThreadDispatcher.md'
+      - 'GenericEventListener' : 'GenericEventListener.md'
+      - 'WebControllerCommandParameters' : 'WebControllerCommandParameters.md'
+      - 'PositionSender' : 'PositionSender.md'
   - FAQ : 'faq.md'
 
 repo_name: 'cyberframe-webcontroller'
