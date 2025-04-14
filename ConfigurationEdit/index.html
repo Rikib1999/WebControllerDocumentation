@@ -899,12 +899,14 @@
 <li><strong>handleError</strong>: Displays an error message (e.g., incorrect password or server error).</li>
 <li><strong>handleSaved</strong>: Shows a confirmation message when the config has been saved successfully.</li>
 <li><strong>handleLoaded</strong>: Sets the <code>configContent</code> to the loaded config and displays a success message.</li>
-<li><strong>validateConfig</strong>: Validates that the config content is a valid JSON object with:</li>
+<li><strong>validateConfig</strong>: Validates that the config content is a valid JSON object with:<ul>
 <li>An <code>applications</code> object</li>
 <li>Each <code>application</code> has valid <code>controlButtons</code>, <code>receivers</code>, and <code>levels</code> arrays</li>
 <li>Each <code>controlButton</code> has a <code>title</code> and a <code>payload.eventName</code></li>
 <li>Each <code>level</code> has a valid <code>url</code>, <code>realWidth</code>, and <code>realHeight</code></li>
 <li>The <code>min_free_memory_percentage</code> field is between 0 and 100</li>
+</ul>
+</li>
 </ul>
 <h3 id="lifecycle-hooks"><strong>Lifecycle Hooks</strong></h3>
 <ul>
