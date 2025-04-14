@@ -351,6 +351,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration edit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testing-with-fake-data" class="md-nav__link">
     <span class="md-ellipsis">
       Testing with Fake Data
@@ -866,6 +875,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration edit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testing-with-fake-data" class="md-nav__link">
     <span class="md-ellipsis">
       Testing with Fake Data
@@ -922,6 +940,10 @@
 <h2 id="map-and-position-tracking">Map and Position Tracking</h2>
 <p>The map is displayed in the bottom left part of the session details page. It shows the positions and rotations of all monitored players and objects in real-time. When the level changes, the map image updates automatically. To display the map, it is necessary to define the type of incoming data as "position" in the configuration file. The map shows the latest positions as well as several previous positions, the number of which can be defined in the configuration. Positions are connected by a line that represents the movement path. Each position is shown as a dot with an arrow indicating the rotation. Older positions are always drawn with smaller dots and arrows. In the Unity package, you can define different colors for each monitored object and also different colors for the latest position, older positions, and the movement path. The Unity package also defines the interval for sending positions.</p>
 <p><img alt="The Map of the Current Level Displays Player Movement and Object Locations in the Scene" src="../images/map.png" /></p>
+<h2 id="configuration-edit">Configuration edit</h2>
+<p>The configuration edit interface allows you to securely view, modify, and save the application's configuration file directly from the browser. Accessible via the session details page, this section provides a textarea where the JSON configuration can be edited manually. Users must enter a valid password to load the current configuration or to save any changes made.</p>
+<p>The interface includes built-in validation to ensure the configuration structure is correct before saving. It checks for required fields such as applications, controlButtons, receivers, levels, and system thresholds like min_free_memory_percentage. Each application's components are validated individually to prevent errors that could disrupt session handling or map rendering.</p>
+<p><img alt="Configuration edit interface" src="../images/configedit.png" /></p>
 <h2 id="testing-with-fake-data">Testing with Fake Data</h2>
 <p>The communication between the frontend and the backend, as well as data display on the frontend, can be easily tested at the address <code>http://localhost:4000/test</code> during local development. By filling in a fake experiment name and fake device identification number, you can create a fake session on the server. You can also send fake data to a specific session based on the device identification number.</p>
 <p><img alt="Testing UI" src="../images/test.png" /></p>
