@@ -1071,6 +1071,17 @@
 <p><code>cd webcontroller</code></p>
 </li>
 <li>
+<p><strong>Set the password used for editing the configuration in the web app</strong></p>
+<ul>
+<li>Open the file <code>docker-compose.yml</code> and set your password.</li>
+</ul>
+<p><code>services:
+  flask_app:
+    environment:
+      - PASSWORD=yourpassword123</code></p>
+<p>You will be able to edit the app configuration on address "{APPLICATION_ADDRESS}/configedit".</p>
+</li>
+<li>
 <p><strong>Build and Run the Docker Containers</strong></p>
 <p><code>docker-compose up --build</code></p>
 <p>This command will:</p>
