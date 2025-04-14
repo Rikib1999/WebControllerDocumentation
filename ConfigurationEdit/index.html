@@ -518,7 +518,7 @@
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Features:
+      Features
     </span>
   </a>
   
@@ -537,7 +537,7 @@
           <li class="md-nav__item">
   <a href="#data" class="md-nav__link">
     <span class="md-ellipsis">
-      Data:
+      Data
     </span>
   </a>
   
@@ -546,7 +546,7 @@
           <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods:
+      Methods
     </span>
   </a>
   
@@ -555,7 +555,7 @@
           <li class="md-nav__item">
   <a href="#lifecycle-hooks" class="md-nav__link">
     <span class="md-ellipsis">
-      Lifecycle Hooks:
+      Lifecycle Hooks
     </span>
   </a>
   
@@ -806,7 +806,7 @@
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Features:
+      Features
     </span>
   </a>
   
@@ -825,7 +825,7 @@
           <li class="md-nav__item">
   <a href="#data" class="md-nav__link">
     <span class="md-ellipsis">
-      Data:
+      Data
     </span>
   </a>
   
@@ -834,7 +834,7 @@
           <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods:
+      Methods
     </span>
   </a>
   
@@ -843,7 +843,7 @@
           <li class="md-nav__item">
   <a href="#lifecycle-hooks" class="md-nav__link">
     <span class="md-ellipsis">
-      Lifecycle Hooks:
+      Lifecycle Hooks
     </span>
   </a>
   
@@ -876,7 +876,7 @@
 
 <p><strong><code>ConfigurationEdit.vue</code></strong> component is responsible for allowing users to edit and manage the application configuration file through a browser interface. It provides functionality for loading, editing, validating, and saving the configuration file (in JSON format), and uses a password-based mechanism for access control.</p>
 <hr />
-<h2 id="features">Features:</h2>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>Configuration Display</strong>: Loads and shows the current configuration file inside a textarea for editing.</li>
 <li><strong>Config Load</strong>: Loads the current config from the backend after password verification.</li>
@@ -886,20 +886,14 @@
 </ul>
 <hr />
 <h2 id="logic-overview">Logic Overview</h2>
-<h3 id="data"><strong>Data:</strong></h3>
+<h3 id="data"><strong>Data</strong></h3>
 <ul>
 <li><strong>password</strong>: The password used to authorize config loading and saving. It is defined in the docker-compose file.</li>
 <li><strong>configContent</strong>: A string containing the full JSON representation of the config file.</li>
 </ul>
-<h3 id="methods"><strong>Methods:</strong></h3>
+<h3 id="methods"><strong>Methods</strong></h3>
 <ul>
-<li><strong>drawMap</strong>: Draws the map image onto the canvas. It resizes the image to fit within the maximum width and height constraints while maintaining the aspect ratio.</li>
-<li>
-<p><strong>updateLatestPositions</strong>: Updates the canvas with the new position data. It redraws the map and then draws the new positions on top of it.</p>
-</li>
-<li>
-<p><strong>goToActiveSessions</strong>: Navigates to the <code>/activesessions</code> page using Vue Router.</p>
-</li>
+<li><strong>goToActiveSessions</strong>: Navigates to the <code>/activesessions</code> page using Vue Router.</li>
 <li><strong>saveConfig</strong>: Triggers config validation. If successful, emits a <code>save_config</code> event over WebSocket with the password and current content.</li>
 <li><strong>loadConfig</strong>: Sends the password via the <code>load_config</code> WebSocket event to request the current config from the backend.</li>
 <li><strong>handleError</strong>: Displays an error message (e.g., incorrect password or server error).</li>
@@ -912,7 +906,7 @@
 <li>Each <code>level</code> has a valid <code>url</code>, <code>realWidth</code>, and <code>realHeight</code></li>
 <li>The <code>min_free_memory_percentage</code> field is between 0 and 100</li>
 </ul>
-<h3 id="lifecycle-hooks"><strong>Lifecycle Hooks:</strong></h3>
+<h3 id="lifecycle-hooks"><strong>Lifecycle Hooks</strong></h3>
 <ul>
 <li><strong>mounted</strong>: Registers WebSocket listeners for <code>error</code>, <code>config_saved</code>, and <code>config_loaded</code>.</li>
 </ul>
