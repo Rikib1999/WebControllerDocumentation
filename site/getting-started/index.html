@@ -643,6 +643,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConfigurationEdit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration edit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1048,6 +1069,17 @@
 <p><strong>Clone the Repository</strong></p>
 <p><code>git clone https://github.com/cyberspace-lab/cyberframe-webcontroller.git</code></p>
 <p><code>cd webcontroller</code></p>
+</li>
+<li>
+<p><strong>Set the password used for editing the configuration in the web app</strong></p>
+<ul>
+<li>Open the file <code>docker-compose.yml</code> and set your password.</li>
+</ul>
+<p><code>services:
+  flask_app:
+    environment:
+      - PASSWORD=yourpassword123</code></p>
+<p>You will be able to edit the app configuration on address <strong><code>"{APPLICATION_ADDRESS}/configedit"</code></strong>.</p>
 </li>
 <li>
 <p><strong>Build and Run the Docker Containers</strong></p>

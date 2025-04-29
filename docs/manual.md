@@ -42,6 +42,14 @@ The map is displayed in the bottom left part of the session details page. It sho
 
 ![The Map of the Current Level Displays Player Movement and Object Locations in the Scene](images/map.png)
 
+## Configuration edit
+
+The configuration edit interface allows you to securely view, modify, and save the application's configuration file directly from the browser. Accessible via the session details page, this section provides a textarea where the JSON configuration can be edited manually. Users must enter a valid password to load the current configuration or to save any changes made.
+
+The interface includes built-in validation to ensure the configuration structure is correct before saving. It checks for required fields such as `applications`, `controlButtons`, `receivers`, `levels`, and system thresholds like `min_free_memory_percentage`. Each application's components are validated individually to prevent errors that could disrupt session handling or map rendering.
+
+![Configuration edit interface](images/configedit.png)
+
 ## Testing with Fake Data
 
 The communication between the frontend and the backend, as well as data display on the frontend, can be easily tested at the address `http://localhost:4000/test` during local development. By filling in a fake experiment name and fake device identification number, you can create a fake session on the server. You can also send fake data to a specific session based on the device identification number.

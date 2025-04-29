@@ -19,7 +19,20 @@ Before you begin, ensure you have the following installed:
     cd webcontroller
     ```
 
-2. **Build and Run the Docker Containers**
+2. **Set the password used for editing the configuration in the web app**
+
+    - Open the file `docker-compose.yml` and set your password.
+
+    ```
+    services:
+      flask_app:
+        environment:
+          - PASSWORD=yourpassword123
+    ```
+
+    You will be able to edit the app configuration on address **`"{APPLICATION_ADDRESS}/configedit"`**.
+
+3. **Build and Run the Docker Containers**
 
     ```
     docker-compose up --build

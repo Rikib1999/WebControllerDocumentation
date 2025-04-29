@@ -13,6 +13,7 @@ nav:
       - 'Active Session Detail' : 'ActiveSessionDetail.md'
       - 'Inactive Session Detail' : 'InactiveSessionDetail.md'
       - 'Current Level Map' : 'LatestPositions.md'
+      - 'Configuration edit' : 'ConfigurationEdit.md'
     - Backend : 'app-py.md'
     - Unity Package:
       - 'WebControllerManager' : 'WebControllerManager.md'
